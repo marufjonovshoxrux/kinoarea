@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>kinoarea</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link href="https://fonts.cdnfonts.com/css/qanelas" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
+	</head>
+	<body>
+		<header></header>
+		<dialog id="searchDialog">
+			<form name="search" id="searchForm">
+				<input
+					type="text"
+					placeholder="Поиск"
+					id="search_inp"
+					name="search_inp"
+				/>
+				<button class="close" type="button">
+					<svg
+						width="22"
+						height="24"
+						viewBox="0 0 22 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M2 2L22 21.9067M22 2.09332L2 22"
+							stroke="white"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+			</form>
+			<div class="film_search"></div>
+		</dialog>
+		<div class="container">
+			<div class="now_film">
+				<h1>Сейчас в кино</h1>
+				<span
+					><svg
+						width="54"
+						height="2"
+						viewBox="0 0 54 2"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M1 1H52.5"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</span>
+				
+				<div class="Gentres"></div>
+				
+			</div>
+
+			<div class="films"></div>
+
+			<button id="All_new">Все Новинки</button>
+
+			<div class="new_triller">
+				<h1>Новые трейлеры</h1>
+				<span
+					>Все трейлеры
+					<svg
+						width="27"
+						height="16"
+						viewBox="0 0 27 16"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M26.7071 8.70711C27.0976 8.31658 27.0976 7.68342 26.7071 7.2929L20.3431 0.928934C19.9526 0.53841 19.3195 0.538409 18.9289 0.928934C18.5384 1.31946 18.5384 1.95262 18.9289 2.34315L24.5858 8L18.9289 13.6569C18.5384 14.0474 18.5384 14.6805 18.9289 15.0711C19.3195 15.4616 19.9526 15.4616 20.3431 15.0711L26.7071 8.70711ZM-8.74228e-08 9L26 9L26 7L8.74228e-08 7L-8.74228e-08 9Z"
+							fill="white"
+						/>
+					</svg>
+				</span>
+			</div>
+
+			<div class="triller">
+				<iframe width="853" height="480" src=""></iframe>
+
+				<div class="name_triller">
+					<div><h1 class="triller_name"></h1></div>
+					<div class="likes">
+						<button id="like">
+							<img src="/like.svg" alt="like" />
+						</button>
+
+						<button id="dislike">
+							<img src="/dislike.svg" alt="dislike" />
+						</button>
+					</div>
+				</div>
+				<div class="recomen_triller"></div>
+			</div>
+
+			<div class="popular_film">
+				<h1>Популярные фильмы</h1>
+				<span
+					><svg
+						width="54"
+						height="2"
+						viewBox="0 0 54 2"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M1 1H52.5"
+							stroke="white"
+							stroke-width="2"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</span>
+				<span>Всё время</span>
+				<span id="year_2020">2020</span>
+				<span id="year_2019">2019</span>
+				<span id="year_2018">2018</span>
+				<span id="year_2017">2017</span>
+				<span id="year_2016">2016</span>
+				<span id="year_2015">2015</span>
+			</div>
+
+			<div class="popular_films"></div>
+
+			
+  
+
+
+			<div class="next_film">
+				<span
+					><svg
+						width="27"
+						height="24"
+						viewBox="0 0 27 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M0.939341 10.9393C0.353554 11.5251 0.353554 12.4749 0.939341 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939341 10.9393ZM27 10.5L2 10.5V13.5L27 13.5V10.5Z"
+							fill="white"
+						/>
+					</svg>
+					4/15
+					<svg
+						width="27"
+						height="24"
+						viewBox="0 0 27 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M26.0607 13.0607C26.6464 12.4749 26.6464 11.5251 26.0607 10.9393L16.5147 1.3934C15.9289 0.807611 14.9792 0.807611 14.3934 1.3934C13.8076 1.97919 13.8076 2.92893 14.3934 3.51472L22.8787 12L14.3934 20.4853C13.8076 21.0711 13.8076 22.0208 14.3934 22.6066C14.9792 23.1924 15.9289 23.1924 16.5147 22.6066L26.0607 13.0607ZM0 13.5L25 13.5V10.5L0 10.5L0 13.5Z"
+							fill="white"
+						/>
+					</svg>
+				</span>
+			</div>
+
+			<div class="popular_person">
+				<h1>Популярные персоны</h1>
+				<span>За год</span>
+				<span>За месяц</span>
+				<span>За неделю</span>
+			</div>
+
+			<div class="actors_status">
+				<div class="actor_1">
+					<span class="number">1-е место</span>
+					<span class="name_first">loading...</span>
+					<span class="age_first">loading...</span>
+				</div>
+				<div class="actor_2">
+					<span class="number">2-е место</span>
+					<span class="name_second">loading...</span>
+					<span class="age_second">loading...</span>
+				</div>
+				<div class="actors_cont">
+					<div class="actor_3">
+						<div class="div">
+							<span class="name_3">loading...</span>
+							<span class="age_3">loading...</span>
+						</div>
+						<div>
+							<span class="number">3-е место</span>
+						</div>
+					</div>
+					<div class="actor_4">
+						<div class="div">
+							<span class="name_4">loading...</span>
+							<span class="age_4">loading...</span>
+						</div>
+						<div>
+							<span class="number">4-е место</span>
+						</div>
+					</div>
+					<div class="actor_5">
+						<div class="div">
+							<span class="name_5">loading...</span>
+							<span class="age_5">loading...</span>
+						</div>
+						<div>
+							<span class="number">5-е место</span>
+						</div>
+					</div>
+					<div class="actor_6">
+						<div class="div">
+							<span class="name_6">loading...</span>
+							<span class="age_6">loading...</span>
+						</div>
+						<div>
+							<span class="number">6-е место</span>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="upcoming">
+				<h1>Ожидаемые новинки</h1>
+			</div>
+
+			<div class="upcoming_films"></div>
+
+			<div class="swiper">
+				<div class="swiper-wrapper"></div>
+
+				<div class="swiper-pagination"></div>
+
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div class="box_sub">
+				<div class="sub_kinoarea">
+					<nav class="left" id="logo">
+						<img src="./logo.svg" alt="logo" />
+						<span><b>Kino</b>area</span>
+					</nav>
+
+					<h1>Подпишитесь на E-mail рассылку</h1>
+					<span
+						>Если хотиет быть в курсе последних новостей и новинок кино -
+						заполните форму ниже и оформите бесплатную E-mail рассылку!
+					</span>
+					<form name="email">
+						<input
+							type="email"
+							placeholder="Введите свой E-mail адрес"
+							name="email"
+							id="email"
+						/>
+						<button class="sub">Подписаться</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="end_text">
+				<span>2024 © Kinoarea. Все права защищены</span>
+				<a href="#">Политика конфиденциальности</a>
+			</div>
+		</div>
+		<script type="module" src="/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	</body>
+</html>
