@@ -43,7 +43,7 @@ if (actorId) {
 			'https://image.tmdb.org/t/p/original' + actorData.profile_path
 		name_rus.innerHTML = actorData.name
 		name_eng.innerHTML = actorData.name
-		job.innerHTML = actorData.biography.slice(0,50)
+		job.innerHTML = actorData.biography.slice(0,300)
 		tall.innerHTML = actorData.popularity
 		data_born.innerHTML = actorData.birthday
 		name_actor.innerHTML = actorData.name	
